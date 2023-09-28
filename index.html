@@ -557,10 +557,6 @@
       </div>
     </div>
     <!-- end of row 5 -->
-
-
-
-
 </section>
 
 
@@ -768,6 +764,77 @@
       </div>
     </div>
     <!-- end of row 3 -->
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">The Effectiveness of <b>TCM-VAE</b></h2>
+        
+        <div class="content has-text-justified">
+          <p>
+            The Variational Autoencoder (VAE) from pretrained image models is often reused for most existing video latent diffusion models. However, the image VAE is a significant contributor to <b>video flickering and inconsistency</b>. To illustrate this issue, we present several examples below. We compare the widely-used image VAE for StableDiffusion with our proposed Temporal-Compensated VAE, which we refer to as <b>TCM-VAE</b>.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-max-desktop">
+    <!-- row 1 -->
+    <div class="columns is-centered">
+      
+      <div class="column">
+        <div class="content">
+          <p class="video-caption-s">
+            Original Video
+          </p>
+          <div class="video-container">
+            <video id="video_30_org" autoplay controls muted loop playsinline>
+              <source src="./static/videos/vae/video_30_org.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <p class="video-caption-s">
+            Image VAE
+          </p>
+          <div class="video-container">
+            <video id="video_30_vanilla" autoplay controls muted loop playsinline>
+              <source src="./static/videos/vae/video_30_vanilla.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <p class="video-caption-s">
+            TCM-VAE (Ours)
+          </p>
+          <div class="video-container">
+            <video id="video_30_tcm" autoplay controls muted loop playsinline>
+              <source src="./static/videos/vae/video_30_tcm.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- end of row 1 -->
+
+
+
+  </div>
 </section>
 
 
