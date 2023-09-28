@@ -366,6 +366,82 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
+        <h2 class="title is-3">The Effectiveness of <b>TCM-VAE</b></h2>
+        
+        <div class="content has-text-justified">
+          <p>
+            The Variational Autoencoder (VAE) from pretrained image models is often reused for most existing video latent diffusion models. However, the image VAE is a significant contributor to <b>video flickering and inconsistency</b>. To illustrate this issue, we present several examples below. We compare the widely-used image VAE for StableDiffusion with our proposed Temporal-Compensated VAE, which we refer to as <b>TCM-VAE</b>.  
+          </p>
+          <p>
+            As for image VAE, we encode the video frames independently and then reconstruct them back into a video using a vanilla method. For TCM-VAE, the encoding process remains unchanged, but we employ our well-designed decoder with temporal awareness. As demonstrated by the results, the flickering effects in the reconstructed videos have been significantly reduced, although they are not yet perfectly smooth. Another advantage of TCM-VAE is its compatibility. Since the encoder remains frozen, TCM-VAE can be easily integrated with most existing video diffusion models, making it a plug-and-play solution.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-max-desktop">
+    <!-- row 1 -->
+    <div class="columns is-centered">
+      
+      <div class="column">
+        <div class="content">
+          <p class="video-caption-s">
+            Original Video
+          </p>
+          <div class="video-container">
+            <video id="video_30_org" autoplay controls muted loop playsinline>
+              <source src="./static/videos/vae/video_30_org.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <p class="video-caption-s">
+            <a href="https://huggingface.co/stabilityai/sd-vae-ft-ema/tree/main">
+              <span>Image VAE </span>
+            </a>
+          </p>
+          <div class="video-container">
+            <video id="video_30_vanilla" autoplay controls muted loop playsinline>
+              <source src="./static/videos/vae/video_30_vanilla.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <p class="video-caption-s">
+            TCM-VAE (Ours)
+          </p>
+          <div class="video-container">
+            <video id="video_30_tcm" autoplay controls muted loop playsinline>
+              <source src="./static/videos/vae/video_30_tcm.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- end of row 1 -->
+
+
+
+  </div>
+</section>
+
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
         <h2 class="title is-3">Visual Conditions Generation (576*320)</h2>
         
         <div class="content has-text-justified">
@@ -767,80 +843,6 @@
   </div>
 </section>
 
-
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">The Effectiveness of <b>TCM-VAE</b></h2>
-        
-        <div class="content has-text-justified">
-          <p>
-            The Variational Autoencoder (VAE) from pretrained image models is often reused for most existing video latent diffusion models. However, the image VAE is a significant contributor to <b>video flickering and inconsistency</b>. To illustrate this issue, we present several examples below. We compare the widely-used image VAE for StableDiffusion with our proposed Temporal-Compensated VAE, which we refer to as <b>TCM-VAE</b>.  
-          </p>
-          <p>
-            As for image VAE, we encode the video frames independently and then reconstruct them back into a video using a vanilla method. For TCM-VAE, the encoding process remains unchanged, but we employ our well-designed decoder with temporal awareness. As demonstrated by the results, the flickering effects in the reconstructed videos have been significantly reduced, although they are not yet perfectly smooth. Another advantage of TCM-VAE is its compatibility. Since the encoder remains frozen, TCM-VAE can be easily integrated with most existing video diffusion models, making it a plug-and-play solution.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <div class="container is-max-desktop">
-    <!-- row 1 -->
-    <div class="columns is-centered">
-      
-      <div class="column">
-        <div class="content">
-          <p class="video-caption-s">
-            Original Video
-          </p>
-          <div class="video-container">
-            <video id="video_30_org" autoplay controls muted loop playsinline>
-              <source src="./static/videos/vae/video_30_org.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="content">
-          <p class="video-caption-s">
-            <a href="https://huggingface.co/stabilityai/sd-vae-ft-ema/tree/main">
-              <span>Image VAE </span>
-            </a>
-          </p>
-          <div class="video-container">
-            <video id="video_30_vanilla" autoplay controls muted loop playsinline>
-              <source src="./static/videos/vae/video_30_vanilla.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="content">
-          <p class="video-caption-s">
-            TCM-VAE (Ours)
-          </p>
-          <div class="video-container">
-            <video id="video_30_tcm" autoplay controls muted loop playsinline>
-              <source src="./static/videos/vae/video_30_tcm.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <!-- end of row 1 -->
-
-
-
-  </div>
-</section>
 
 
 
