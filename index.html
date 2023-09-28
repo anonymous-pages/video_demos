@@ -778,7 +778,10 @@
         
         <div class="content has-text-justified">
           <p>
-            The Variational Autoencoder (VAE) from pretrained image models is often reused for most existing video latent diffusion models. However, the image VAE is a significant contributor to <b>video flickering and inconsistency</b>. To illustrate this issue, we present several examples below. We compare the widely-used image VAE for StableDiffusion with our proposed Temporal-Compensated VAE, which we refer to as <b>TCM-VAE</b>.  The flickering effects in the reconstructed videos have been significantly reduced, although they are not yet perfectly smooth.
+            The Variational Autoencoder (VAE) from pretrained image models is often reused for most existing video latent diffusion models. However, the image VAE is a significant contributor to <b>video flickering and inconsistency</b>. To illustrate this issue, we present several examples below. We compare the widely-used image VAE for StableDiffusion with our proposed Temporal-Compensated VAE, which we refer to as <b>TCM-VAE</b>.  
+          </p>
+          <p>
+            As for image VAE, we encode the video frames independently and then reconstruct them back into a video using a vanilla method. For TCM-VAE, the encoding process remains unchanged, but we employ our well-designed decoder with temporal awareness. As demonstrated by the results, the flickering effects in the reconstructed videos have been significantly reduced, although they are not yet perfectly smooth. Another advantage of TCM-VAE is its compatibility. Since the encoder remains frozen, TCM-VAE can be easily integrated with most existing video diffusion models, making it a plug-and-play solution.
           </p>
         </div>
 
@@ -806,7 +809,9 @@
       <div class="column">
         <div class="content">
           <p class="video-caption-s">
-            Image VAE
+            <a href="https://github.com/AILab-CVC/Make-Your-Video">
+              <span>Image VAE.</span>
+            </a> https://huggingface.co/stabilityai/sd-vae-ft-ema/tree/main
           </p>
           <div class="video-container">
             <video id="video_30_vanilla" autoplay controls muted loop playsinline>
